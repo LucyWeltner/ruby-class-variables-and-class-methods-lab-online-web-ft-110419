@@ -31,7 +31,19 @@ class Song
   def self.artists
     @@artists 
   end 
-  def self.genres 
+  def self.genres
+    unique_array = []
+    unique = true
+    i = 0 
+    j = 0 
+    while i < @@genres.length do 
+      while j < @@genres.length do
+        if @@genres[i] == @@genres[j]
+          unique = false
+        end
+      end
+      if unique == true
+        unique_array << @@genres[i]
     @@genres 
   end
   def self.genre_count
