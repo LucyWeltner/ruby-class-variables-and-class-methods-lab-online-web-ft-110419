@@ -17,7 +17,11 @@ class Song
       @@genre_count[genre] = 1
     end 
     if @@artists.include?(artist)
-      @@artist_count[artist] += 1 
+      @@artist_count[artist] += 1
+      
+      p @@artists
+      p Song.artists 
+p Song.genre_count
     else
       @@artist_count[artist] = 1
       @@artists << artist
@@ -48,3 +52,6 @@ end
 #p Song.artists 
 #p Song.genre_count
 
+lucifer = Song.new("Lucifer", "Jay-Z", "rap" )
+ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
+hit_me = Song.new("hit me baby one more time", "Brittany Spears", "pop")
