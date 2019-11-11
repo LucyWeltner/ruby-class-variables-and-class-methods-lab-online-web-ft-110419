@@ -41,10 +41,15 @@ class Song
         if @@genres[i] == @@genres[j]
           unique = false
         end
+        j += 1
       end
       if unique == true
         unique_array << @@genres[i]
-    @@genres 
+      end 
+      i += 1 
+      unique = true
+    end
+    unique_array
   end
   def self.genre_count
     @@genre_count
