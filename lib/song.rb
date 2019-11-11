@@ -23,8 +23,6 @@ class Song
     else
       @@artist_count[artist] = 1
       @@artists << artist
-      p "I'm adding an artist"
-      p @@artists
     end 
   end 
   def self.count 
